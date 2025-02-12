@@ -1,0 +1,8 @@
+<div>
+    <h1>V-if demo</h1>
+    <TabBar v-model:tabs="tabs" v-model:currentTab="currentTab" />
+
+    <TabHome v-if="currentTab === 'Home'" />
+    <TabPosts v-if="currentTab === 'Posts'" />
+    <TabArchive v-if="currentTab === 'Archive'" />
+</div>

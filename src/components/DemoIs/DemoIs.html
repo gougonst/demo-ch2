@@ -1,0 +1,6 @@
+<div>
+    <h1>V-bind:is demo</h1>
+    <TabBar v-model:tabs="tabs" v-model:currentTab="currentTab" />
+
+    <component v-bind:is="currentTabComponent" />
+</div>

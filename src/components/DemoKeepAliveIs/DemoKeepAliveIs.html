@@ -1,0 +1,13 @@
+<div>
+    <h1>KeepAlive + v-bind:is</h1>
+    <TabBar v-model:tabs="tabs" v-model:currentTab="currentTab" />
+
+    <!-- LRU -->
+    <!-- 沒有改變數值，單純顯示，也會被算作 1 次 -->
+    <keep-alive :include="includeTabComponents" :max="2">
+        <component v-bind:is="currentTabComponent" />
+    </keep-alive>
+
+    <button v-on:click="includeKeepAlive">Include {{ currentTab }}</button>
+    <button v-on:click="excludeKeepAlive">Exclude {{ currentTab }}</button>
+</div>

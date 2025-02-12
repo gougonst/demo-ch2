@@ -1,0 +1,8 @@
+<div>
+    <h1>V-show demo</h1>
+    <TabBar v-model:tabs="tabs" v-model:currentTab="currentTab" />
+
+    <TabHome v-show="currentTab === 'Home'"></TabHome>
+    <TabPosts v-show="currentTab === 'Posts'"></TabPosts>
+    <TabArchive v-show="currentTab === 'Archive'"></TabArchive>
+</div>
